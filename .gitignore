@@ -1,0 +1,22 @@
+# Node modules (back + front)
+backend/node_modules/
+frontend/trab1/node_modules/
+
+# Build do React (caso venha a gerar)
+frontend/trab1/build/
+
+# Variáveis de ambiente
+backend/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Pastas temporárias
+temp/
+.tmp/
+.cache/
