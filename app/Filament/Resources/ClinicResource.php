@@ -78,6 +78,11 @@ class ClinicResource extends Resource
         ];
     }
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Management';
+    }
+
     public static function getPages(): array
     {
         return [

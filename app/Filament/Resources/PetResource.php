@@ -94,6 +94,11 @@ class PetResource extends Resource
         ];
     }
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Care';
+    }
+
     public static function getPages(): array
     {
         return [
