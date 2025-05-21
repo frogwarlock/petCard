@@ -14,6 +14,7 @@ use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
+
     public function run(): void
     {
         // 🔐 1. Criar Admin Filament
@@ -37,6 +38,8 @@ class DatabaseSeeder extends Seeder
 
     protected function seedAdminUser()
     {
+        Role::create(['name' => 'admin', 'guard_name' => 'web']);
+
         $user = User::create([
             'name' => 'Admin',
             'email' => 'admin@admin.com',

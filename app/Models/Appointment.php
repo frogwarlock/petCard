@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\VaccineName;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +14,17 @@ class Appointment extends Model
         'employee_id',
         'pet_id',
         'observation',
+        'has_vaccine',
+        'vaccine_name',
+        'vaccine_date',
+        'next_dose_date',
+    ];
+
+    protected $casts = [
+        'has_vaccine' => 'boolean',
+        'vaccine_date' => 'date',
+        'next_dose_date' => 'date',
+        'vaccine_name' => VaccineName::class
     ];
 
     public function clinic(){

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,6 +18,7 @@ class ClientFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id' => User::factory(),
             'name' => $this->faker->name(),
             'number' => $this->faker->numberBetween(10000000000, 99999999999),
             'cpf' => $this->faker->unique()->numberBetween(10000000000, 99999999999),

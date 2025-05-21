@@ -18,6 +18,10 @@ return new class extends Migration
             $table->foreignId('employee_id')->constrained()->onDelete('cascade');
             $table->foreignId('pet_id')->constrained()->onDelete('cascade');
             $table->string('observation')->nullable();
+            $table->boolean('has_vaccine')->default(false);
+            $table->string('vaccine_name')->nullable();
+            $table->date('vaccine_date')->nullable();
+            $table->date('next_dose_date')->nullable();
             $table->timestamps();
         });
     }
@@ -30,3 +34,5 @@ return new class extends Migration
         Schema::dropIfExists('appointments');
     }
 };
+
+
